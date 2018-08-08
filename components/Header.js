@@ -2,7 +2,7 @@ import React from 'react';
 import NextHead from 'next/head';
 
 let defaultDescription = 'Memory';
-let defaultOGURL = 'https://ett.se';
+let defaultOGURL = 'https://moimemoire.now.sh';
 let defaultOGImage = '/static/img/macron.jpg';
 
 class Header extends React.Component {
@@ -12,13 +12,16 @@ class Header extends React.Component {
     return (
       <NextHead>
         <meta charset="UTF-8" />
-        <title>{props.title || ''}</title>
+        <title>{props.title || 'Memory'}</title>
         <meta
           name="description"
           content={props.description || defaultDescription}
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/static/img/macron.jpg" />
+
+        <link rel="manifest" href="/manifest.json" />
+
         <meta property="og:url" content={props.url || defaultOGURL} />
         <meta property="og:title" content={props.title || ''} />
         <meta

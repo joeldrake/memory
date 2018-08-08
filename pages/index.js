@@ -191,15 +191,15 @@ class Index extends React.Component {
         <div
           className={
             `card card${i}` +
-            (card.cleared ? ` cleared` : null) +
-            (card.flipped ? ` flipped` : null)
+            (card.cleared ? ` cleared` : ``) +
+            (card.flipped ? ` flipped` : ``)
           }
           onClick={
             !card.cleared && !card.flipped ? this.handleCardClick(i) : null
           }
           key={i}
         >
-          <div className={`cardFace frontside`}>?</div>
+          <div className={`cardFace frontside`} />
           <div className={`cardFace backside`} style={style}>
             {text}
           </div>

@@ -1,0 +1,16 @@
+{
+  "short_name": "Memory",
+  "name": "Memory",
+  "description": "Memory",
+  "icons": [
+    {
+      "src": "/static/img/macron.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "pink",
+  "background_color": "pink"
+}

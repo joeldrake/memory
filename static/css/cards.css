@@ -43,6 +43,7 @@
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   background-position: center;
   background-size: cover;
 }
@@ -67,6 +68,13 @@
 
 .card .frontside {
   transform: perspective(var(--perspective)) rotateY(0);
+  background: repeating-linear-gradient(
+    -45deg,
+    pink,
+    pink 25px,
+    white 25px,
+    white 50px
+  );
 }
 
 .card.flipped .frontside {

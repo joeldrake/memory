@@ -18,6 +18,10 @@
     "react-dom": "^16.4.2",
     "yup": "^0.26.0"
   },
+  "now": {
+    "name": "memory",
+    "alias": "drakememory.now.sh"
+  },
   "devDependencies": {
     "http-proxy-middleware": "^0.18.0"
   }
