@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-size: 16px;
+}
+
+body {
+  overflow-y: scroll;
+  background: linear-gradient(
+    -45deg,
+    rgba(4, 191, 212, 0.9) 0%,
+    rgba(117, 8, 161, 0.9) 100%
+  );
+  background-size: cover;
+}
+
+.standardPadding {
+  padding: 20px;
+}
+
+@media screen and (min-width: 700px) {
+}
+
+@media screen and (min-width: 500px) {
+}
+
+a {
+  color: #0073e0;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgba(0, 115, 224, 0.8);
+  text-decoration: underline;
+}
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.flexRow > div {
+  width: 98%;
+}
+
+@media screen and (max-width: 500px) {
+  .flexRow.breakOnSmallScreen {
+    display: block;
+  }
+
+  .flexRow.breakOnSmallScreen > div {
+    width: 100%;
+  }
+}
+
+hr {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cardsWrapper {
+  display: grid;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  padding: 3%;
+  max-width: 700px;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media screen and (min-width: 550px) {
+  .cardsWrapper {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+}
+
+.card {
+  position: relative;
+  padding-top: 100%;
+}
+
+.cardFace {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background: white;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 2px;
+  border: 5px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  background-position: center;
+  background-size: cover;
+}
+
+.cleared .cardFace,
+.flipped .cardFace {
+  cursor: default;
+}
+
+.cleared .cardFace {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  opacity: 0.5;
+}
+
+.card .backside {
+  -webkit-transform: perspective(600px) rotateY(-180deg);
+          transform: perspective(600px) rotateY(-180deg);
+}
+
+.card.flipped .backside {
+  -webkit-transform: perspective(600px) rotateY(0);
+          transform: perspective(600px) rotateY(0);
+}
+
+.card .frontside {
+  -webkit-transform: perspective(600px) rotateY(0);
+          transform: perspective(600px) rotateY(0);
+  background: repeating-linear-gradient(
+    -45deg,
+    pink,
+    pink 25px,
+    white 25px,
+    white 50px
+  );
+}
+
+.card.flipped .frontside {
+  -webkit-transform: perspective(600px) rotateY(180deg);
+          transform: perspective(600px) rotateY(180deg);
+}
+
+/*# sourceMappingURL=style.css.map*/
